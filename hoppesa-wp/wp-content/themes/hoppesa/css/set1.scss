@@ -1,0 +1,257 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'feathericons';
+	src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
+	src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
+		url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
+		url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
+		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
+}
+
+.grid {
+	position: relative;
+	margin: 0 auto;
+	padding: 1em 0 0;
+	max-width: 1400px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	
+    position: relative;
+    overflow: hidden;
+    margin: 10px auto;
+    max-width: 320px;
+    width: 100%;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+		@media (min-width: 580px){
+			margin: 10px auto;
+			max-width: 536px;
+			max-height: 300px;
+	     }
+				@media (min-width: 768px){
+					float: left;
+					max-width: 32.5%;
+					max-height: 700px;
+					height: 320px;
+					margin: 10px 1px;
+				 }
+				   @media (min-width: 960px){
+				   	height: auto;
+				   	margin: 10px 2px;
+				   }
+
+}
+
+
+
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	h2{
+		text-transform: uppercase;
+		font-family:'gotham_bookregular';	
+	}
+
+	span{
+		font-family:'gotham_boldregular';
+
+	}
+	@media (min-width: 768px){
+		padding: 1.5em;
+	}
+
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 0px;
+	font-size: 64.5%;
+	line-height: 15px;
+}
+
+
+
+/*---------------*/
+/***** Oscar *****/
+/*---------------*/
+
+figure.effect-oscar {
+	background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+	background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
+}
+
+
+
+
+figure.effect-oscar img {
+	opacity: 0.9;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-oscar figcaption {
+	background-color: rgba(58,52,42,0.7);
+	-webkit-transition: background-color 0.35s;
+	transition: background-color 0.35s;
+	
+}
+
+figure.effect-oscar figcaption::after{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+	left: 20px;
+	border: 1px solid #fff;
+	background-color: transparent;
+	padding:10px;
+	content: '';
+	@media (min-width: 980px){
+		top: 30px;
+		right:  30px;
+		bottom: 30px;
+		left: 30px;
+	}
+}
+
+
+figure.effect-oscar figcaption::before {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	border: 1px solid #fff;
+	background-color: white;
+	content: '';
+}
+
+figure.effect-oscar h2 {
+	margin: -4% 0 4px 0;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+	font-size:21px;
+
+	@media (min-width: 580px){
+		margin: 0% 0 10px 0;
+		font-size: 20px;
+	}
+
+	@media (min-width: 768px){
+		font-size:15px;
+		margin: 0 0 4px 0;
+	}
+
+	@media (min-width: 960px){
+		margin: 16% 0 10px 0;
+		font-size:24px;
+
+	}
+	@media (min-width: 1200px){
+		margin: 6% 0 10px 0;
+	}
+
+}
+
+figure.effect-oscar p {
+	font-family: "gotham_lightregular";
+	padding-top: 30px;
+	opacity: 1;
+	@media (min-width: 1200px){
+		font-size: 15px;
+		font-weight: 100;
+		padding: 54px 18px 4%;
+		line-height: 21px;
+	}
+
+
+}
+
+figure.effect-oscar figcaption::before,{
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+
+figure.effect-oscar:hover h2 {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	color: black;
+}
+
+figure.effect-oscar:hover figcaption::before,
+figure.effect-oscar:hover p {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	color: black;
+}
+
+figure.effect-oscar:hover figcaption {
+	background-color: rgba(58,52,42,0);
+}
+
+figure.effect-oscar:hover img {
+	opacity: .8;
+}
+
